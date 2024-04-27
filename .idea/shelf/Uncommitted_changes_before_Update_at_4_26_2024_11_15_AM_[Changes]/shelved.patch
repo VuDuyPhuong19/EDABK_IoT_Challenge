@@ -1,0 +1,158 @@
+Index: app/src/main/java/com/example/mainapp/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mainapp\r\n\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport android.os.Bundle\r\nimport android.widget.TextView\r\nimport com.example.mainapp.databinding.ActivityMainBinding\r\nimport kotlinx.android.synthetic.main.activity_main.AirConditioner\r\nimport kotlinx.android.synthetic.main.activity_main.device_1\r\nimport kotlinx.android.synthetic.main.activity_main.device_2\r\nimport kotlinx.android.synthetic.main.activity_main.device_3\r\nimport kotlinx.android.synthetic.main.activity_main.device_4\r\nimport kotlinx.android.synthetic.main.device_controller.view.deviceStatus\r\nimport kotlinx.android.synthetic.main.device_controller.view.device_name\r\n\r\nprivate lateinit var binding: ActivityMainBinding\r\nclass MainActivity : AppCompatActivity() {\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.activity_main)\r\n        binding = ActivityMainBinding.inflate(layoutInflater)\r\n        setContentView(binding.root)\r\n        deviceProccess()\r\n\r\n    }\r\n    private fun deviceProccess(){\r\n        device_1.device_name.text = \"Device 1\"\r\n        //Change device status\r\n        device_2.device_name.text = \"Device 2\"\r\n        device_3.device_name.text = \"Device 3\"\r\n        device_4.device_name.text = \"Device 4\"\r\n\r\n        device_1.deviceStatus.setImageDrawable(getDrawable(R.drawable.points_green))\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/mainapp/MainActivity.kt b/app/src/main/java/com/example/mainapp/MainActivity.kt
+--- a/app/src/main/java/com/example/mainapp/MainActivity.kt	
++++ b/app/src/main/java/com/example/mainapp/MainActivity.kt	
+@@ -24,11 +24,10 @@
+     }
+     private fun deviceProccess(){
+         device_1.device_name.text = "Device 1"
+-        //Change device status
+         device_2.device_name.text = "Device 2"
+         device_3.device_name.text = "Device 3"
+         device_4.device_name.text = "Device 4"
+-
++        //Change device status
+         device_1.deviceStatus.setImageDrawable(getDrawable(R.drawable.points_green))
+     }
+ 
+Index: app/src/main/java/com/example/mainapp/model/Device.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mainapp.model;\r\n\r\nimport com.google.gson.annotations.SerializedName;\r\npublic class Device {\r\n    @SerializedName(\"temperature\")\r\n    private double temperature;\r\n    @SerializedName(\"humidity\")\r\n    private double humidity;\r\n    @SerializedName(\"device_on\")\r\n    private boolean device_on;\r\n    @SerializedName(\"light1_status\")\r\n    private boolean light1_status;\r\n    @SerializedName(\"light2_status\")\r\n    private boolean light2_status;\r\n    @SerializedName(\"air_conditioning_state\")\r\n    private boolean air_conditioning_state;\r\n    @SerializedName(\"fan_state\")\r\n    private boolean fan_state;\r\n    @SerializedName(\"TV_state\")\r\n    private boolean TV_state;\r\n    @SerializedName(\"time\")\r\n    private boolean time;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/mainapp/model/Device.java b/app/src/main/java/com/example/mainapp/model/Device.java
+--- a/app/src/main/java/com/example/mainapp/model/Device.java	
++++ b/app/src/main/java/com/example/mainapp/model/Device.java	
+@@ -8,16 +8,83 @@
+     private double humidity;
+     @SerializedName("device_on")
+     private boolean device_on;
+-    @SerializedName("light1_status")
+-    private boolean light1_status;
+-    @SerializedName("light2_status")
+-    private boolean light2_status;
++    @SerializedName("light1_state")
++    private boolean light1_state;
++    @SerializedName("light2_state")
++    private boolean light2_state;
+     @SerializedName("air_conditioning_state")
+     private boolean air_conditioning_state;
+     @SerializedName("fan_state")
+     private boolean fan_state;
+-    @SerializedName("TV_state")
+-    private boolean TV_state;
++    @SerializedName("tv_state")
++    private boolean tv_state;
+     @SerializedName("time")
+-    private boolean time;
++    private String time;
++
++    public Device() {
++    }
++
++    // temperature Getter and Setter
++    public double getTemperature(){
++        return temperature;
++    }
++    public void setTemperature(double temperature){
++        this.temperature = temperature;
++    }
++    // humidity Getter and Setter
++    public double getHumidity(){
++        return humidity;
++    }
++    public void setHumidity(double humidity){
++        this.humidity = humidity;
++    }
++    // device_on Getter and Setter
++    public boolean getDeviceOn(){
++        return device_on;
++    }
++    public void setDeviceOn(boolean device_on){
++        this.device_on = device_on;
++    }
++    // light1_state Getter and Setter
++    public boolean getLight1State(){
++        return light1_state;
++    }
++    public void setLight1State(boolean light1_state){
++        this.light1_state = light1_state;
++    }
++    // light2_state Getter and Setter
++    public boolean getLight2State(){
++        return light2_state;
++    }
++    public void setLight2State(boolean light2_state){
++        this.light2_state = light2_state;
++    }
++    // air_conditioning_state Getter and Setter
++    public boolean getAirConditioningState(){
++        return air_conditioning_state;
++    }
++    public void setAirConditioningState(boolean air_conditioning_state){
++        this.air_conditioning_state = air_conditioning_state;
++    }
++    // fan_state Getter and Setter
++    public boolean getFanState(){
++        return fan_state;
++    }
++    public void setFanState(boolean fan_state){
++        this.fan_state = fan_state;
++    }
++    // tv_state Getter and Setter
++    public boolean getTvState(){
++        return tv_state;
++    }
++    public void setTvState(boolean tv_state){
++        this.tv_state = tv_state;
++    }
++    // time Getter and Setter
++    public String getTime(){
++        return time;
++    }
++    public void setTime(String time){
++        this.time = time;
++    }
+ }
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <runningDeviceTargetSelectedWithDropDown>\r\n      <Target>\r\n        <type value=\"RUNNING_DEVICE_TARGET\" />\r\n        <deviceKey>\r\n          <Key>\r\n            <type value=\"VIRTUAL_DEVICE_PATH\" />\r\n            <value value=\"C:\\Users\\ACER\\.android\\avd\\Pixel_7_Pro_API_30.avd\" />\r\n          </Key>\r\n        </deviceKey>\r\n      </Target>\r\n    </runningDeviceTargetSelectedWithDropDown>\r\n    <timeTargetWasSelectedWithDropDown value=\"2024-04-26T10:16:07.277748Z\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	
++++ b/.idea/deploymentTargetDropDown.xml	
+@@ -1,17 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+-    <runningDeviceTargetSelectedWithDropDown>
+-      <Target>
+-        <type value="RUNNING_DEVICE_TARGET" />
+-        <deviceKey>
+-          <Key>
+-            <type value="VIRTUAL_DEVICE_PATH" />
+-            <value value="C:\Users\ACER\.android\avd\Pixel_7_Pro_API_30.avd" />
+-          </Key>
+-        </deviceKey>
+-      </Target>
+-    </runningDeviceTargetSelectedWithDropDown>
+-    <timeTargetWasSelectedWithDropDown value="2024-04-26T10:16:07.277748Z" />
++    <value>
++      <entry key="app">
++        <State />
++      </entry>
++    </value>
+   </component>
+ </project>
+\ No newline at end of file

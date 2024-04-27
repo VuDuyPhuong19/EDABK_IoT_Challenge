@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable inner_shadow
+drawable larrow
+drawable nameedit
+drawable notification
+drawable points
+drawable points_green
+drawable temperature
+font arial
+id AirConditioner
+id DeviceManager
+id btnBack
+id btnNotification
+id deviceStatus
+id device_1
+id device_2
+id device_3
+id device_4
+id device_name
+id device_temperature
+id editName
+id imageView
+id textView
+layout activity_main
+layout device_controller
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MainApp
+style Theme.MainApp
+xml backup_rules
+xml data_extraction_rules
