@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 
 // Route đăng ký
 router.post('/register', async (req, res) => {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
     console.log('Received register request:', req.body);
   
     try {
@@ -17,12 +17,12 @@ router.post('/register', async (req, res) => {
   
       const hashedPassword = await bcrypt.hash(password, 10);
   
-      const newUser = new User({ email, password: hashedPassword });
+      const newUser = new User({ name, email, password: hashedPassword });
       await newUser.save();
   
       res.status(201).json({ message: 'User registered successfully' });
     } catch (error) {
-      console.error('Error during registration:', error);
+      console.error('Error during registration:'.red.bold, error);
       res.status(500).json({ message: 'Server error' });
     }
 });
