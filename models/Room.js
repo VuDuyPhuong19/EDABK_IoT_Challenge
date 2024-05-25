@@ -8,11 +8,11 @@ const RoomSchema = new mongoose.Schema({
     roomImage: {
         type: String,
         required: true
+    },
+    roomDetail: {
+        type: String,
+        required: true
     }
-    // roomDetail: {
-    //     type: String,
-    //     required: true
-    // }
 });
 
 const Room = mongoose.model('Room', RoomSchema);
