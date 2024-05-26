@@ -4,8 +4,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, './config.env') });
 
 const connectMQTT = () => {
-  // const mqttClient = mqtt.connect(process.env.MQTT_BROKER_URL, {
-    const mqttClient = mqtt.connect('mqtts://4cc5961d8ff0416e9956c759300dd3ce.s1.eu.hivemq.cloud:8883', {
+  const mqttClient = mqtt.connect(process.env.MQTT_BROKER_URL, {
     username: process.env.MQTT_USERNAME, // username
     password: process.env.MQTT_PASSWORD, // password
     rejectUnauthorized: true // thêm tùy chọn này nếu không cần xác thực SSL
