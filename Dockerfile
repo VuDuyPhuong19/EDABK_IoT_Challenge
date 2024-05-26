@@ -16,6 +16,9 @@ RUN npm install
 # Sao chép toàn bộ mã nguồn vào container
 COPY . .
 
+# Sao chép file config.env vào thư mục làm việc
+COPY config/config.env ./config/
+
 # Mở cổng mà ứng dụng của bạn sẽ chạy
 EXPOSE 3000
 
