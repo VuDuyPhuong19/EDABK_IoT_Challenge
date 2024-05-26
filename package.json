@@ -15,12 +15,15 @@
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "date-fns": "^3.6.0",
+    "docker": "^1.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.6.1",
     "mongoose": "^8.4.0",
     "mqtt": "^5.6.1",
-    "node-cron": "^3.0.3"
+    "node-cron": "^3.0.3",
+    "parse-dashboard": "^5.4.0",
+    "parse-server": "^7.0.0"
   }
 }
