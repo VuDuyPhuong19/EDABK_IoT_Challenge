@@ -1,1 +1,11 @@
+Face recognition (nhận diện khuôn mặt) là một công nghệ sử dụng các thuật toán học máy để xác định và xác thực danh tính của một người 
+dựa trên đặc điểm khuôn mặt. Công nghệ này có ứng dụng rộng rãi trong an ninh, kiểm soát truy cập, quảng cáo, và nhiều lĩnh vực khác.
 
+Phương pháp nhận diện khuôn mặt hoạt động bằng cách phân tích các đặc điểm đặc trưng trên khuôn mặt của mỗi người, 
+như khoảng cách giữa các mắt, hình dạng mũi, vị trí và hình dáng của miệng, và các đặc điểm khác. 
+
+Các đặc điểm này sau đó được mã hóa thành một vector đặc trưng, gọi là face encoding, để so sánh với các face encoding khác trong cơ sở dữ liệu.
+
+Cách Sử Dụng Face Recognition với Thư Viện Python
+Một trong những thư viện Python phổ biến nhất để thực hiện nhận diện khuôn mặt là face_recognition.
+ Thư viện này xây dựng dựa trên dlib, một thư viện mạnh mẽ cho việc học máy và xử lý ảnh.
