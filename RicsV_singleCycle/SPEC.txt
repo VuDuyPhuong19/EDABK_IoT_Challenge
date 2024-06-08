@@ -1,0 +1,26 @@
+bộ xử lý RISC-V đơn chu kỳ (Single-Cycle Processor) với các thành phần sau:
+
+Program Counter (PC)
+Instruction Memory (IMEM)
+Control Unit
+Register File
+ALU
+Data Memory (DMEM)
+Immediate Generator
+Adder cho PC
+
+
+1.Program Counter (PC):
+Đầu vào: PC_in
+Đầu ra: PC_out
+Chức năng: Lưu trữ địa chỉ của lệnh hiện tại.Sau mỗi lệnh thực hiện xong( trong single Cycle thì sẽ là sau 1 chu kì đồng hồ) , sẽ tính toán ra PC mới cho chương trình.
+
+2.Instruction Memory (IMEM):
+Đầu vào: read_address (Địa chỉ từ PC)
+Đầu ra: Instruction_out (Lệnh hiện tại)
+Chức năng: Lấy lệnh từ bộ nhớ chương trình dựa trên địa chỉ từ PC.
+
+3.Register File
+input 
+ouput
+chức năng: 

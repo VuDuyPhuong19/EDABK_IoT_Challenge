@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 20 08:59:01 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : RicsV_singleCycle
+Top-level Entity Name : RicsV_singleCycle
+Family : Cyclone IV E
+Total logic elements : 32
+    Total combinational functions : 32
+    Dedicated logic registers : 30
+Total registers : 30
+Total pins : 66
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

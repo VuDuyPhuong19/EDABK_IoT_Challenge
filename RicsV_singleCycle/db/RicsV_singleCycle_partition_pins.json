@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_cur[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_cur[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_cur[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_cur[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_cur[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_cur[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
