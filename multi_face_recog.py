@@ -10,12 +10,12 @@ from datetime import datetime
 
 # Khởi tạo Picamera2
 picam2 = Picamera2()
-capture_config = picam2.create_still_configuration(main={"size": (320, 240)})
+capture_config = picam2.create_still_configuration(main={"size": (750, 1050)})
 picam2.configure(capture_config)
 picam2.start()
 
 # Cấp phát bộ nhớ cho hình ảnh đầu ra
-output = np.empty((240, 320, 3), dtype=np.uint8)
+output = np.empty((1050, 750, 3), dtype=np.uint8)
 
 # Tải ảnh khuôn mặt đã biết
 print("Thiết lập dữ liệu nhân viên...")
@@ -23,7 +23,7 @@ known_person = []
 known_face_encoding = []
 
 # Vòng lặp để thêm ảnh trong thư mục friends
-for file in os.listdir("friends"):
+for file in os.listdir("/home/edabk/face_recognition/examples/friends"):
     try:
         person_name = file.replace(".jpg", "")
         file_path = os.path.join("friends", file)
@@ -94,7 +94,7 @@ try:
             client.publish(topic, payload=json_data)
             print("Đã gửi dữ liệu cho server:", json_data)
 
-        time.sleep(10)  # Điều chỉnh tần suất chụp ảnh
+        time.sleep(5)  # Điều chỉnh tần suất chụp ảnh
 
 except KeyboardInterrupt:
     print("Đã ngắt kết nối!")
